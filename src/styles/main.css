@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  /*
+    Overrides preflight base styles
+    in order to avoid vue-axe button svgs layout issues.
+  */
+  .va-btn > svg {
+    @apply inline;
+  }
+}

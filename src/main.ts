@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import VueAxe from "./plugins/vue-axe";
+import "./styles/main.css";
 
 const app = createApp(App);
 
