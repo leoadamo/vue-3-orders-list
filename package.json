@@ -34,10 +34,12 @@
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
+    "axe-core": "^4.10.3",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.31.0",
     "eslint-plugin-vue": "~10.3.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
     "jsdom": "^26.1.0",
@@ -48,6 +50,7 @@
     "vite": "^7.0.6",
     "vite-plugin-vue-devtools": "^8.0.0",
     "vitest": "^3.2.4",
+    "vue-axe": "^3.1.2",
     "vue-tsc": "^3.0.4"
   }
 }
