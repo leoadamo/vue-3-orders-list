@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
+/* Theme configuration */
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+}
+
 @layer base {
+  /* App wide styles */
+  body {
+    @apply font-roboto;
+  }
+
   /*
     Overrides preflight base styles
     in order to avoid vue-axe button svgs layout issues.
