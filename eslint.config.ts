@@ -14,6 +14,14 @@ export default defineConfigWithVueTs(
   {
     name: "app/files-to-lint",
     files: ["**/*.{ts,mts,tsx,vue}"],
+    rules: {
+      "vue/multi-word-component-names": [
+        "error",
+        {
+          ignores: ["Index"],
+        },
+      ],
+    },
   },
 
   globalIgnores(["**/dist/**", "**/dist-ssr/**", "**/coverage/**"]),
@@ -26,5 +34,6 @@ export default defineConfigWithVueTs(
     ...pluginVitest.configs.recommended,
     files: ["src/**/__tests__/*"],
   },
+
   skipFormatting,
 );

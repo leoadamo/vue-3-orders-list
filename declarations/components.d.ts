@@ -9,6 +9,10 @@ export {};
 declare module 'vue' {
   export interface GlobalComponents {
     IonPersonOutline: typeof import('~icons/ion/person-outline')['default']
+    OrderAddresses: typeof import('./../src/components/OrderAddresses/index.vue')['default']
+    OrderHeader: typeof import('./../src/components/OrderHeader/index.vue')['default']
+    OrderSuplier: typeof import('../src/components/OrderSupplier/index.vue')['default']
+    OrderSupplier: typeof import('./../src/components/OrderSupplier/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -11,7 +11,7 @@ import type { ApiError } from "@/types/errors";
 export function useOrder() {
   const isLoading = ref<boolean>(false);
   const error = ref<ApiError | null>(null);
-  const order = ref<Order | null>(null);
+  const order = ref<Order>({} as Order);
 
   /**
    * It fetches order details from the API and handles loading and error states.
