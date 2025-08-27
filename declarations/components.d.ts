@@ -8,9 +8,14 @@ export {};
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    IonCallOutline: typeof import('~icons/ion/call-outline')['default']
+    IonContactOutline: typeof import('~icons/ion/contact-outline')['default']
+    IonEmailOutline: typeof import('~icons/ion/email-outline')['default']
+    IonMailOutline: typeof import('~icons/ion/mail-outline')['default']
     IonPersonOutline: typeof import('~icons/ion/person-outline')['default']
     OrderAddresses: typeof import('./../src/components/OrderAddresses/index.vue')['default']
     OrderHeader: typeof import('./../src/components/OrderHeader/index.vue')['default']
+    OrderProtocol: typeof import('./../src/components/OrderHeader/OrderProtocol.vue')['default']
     OrderSuplier: typeof import('../src/components/OrderSupplier/index.vue')['default']
     OrderSupplier: typeof import('./../src/components/OrderSupplier/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

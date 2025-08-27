@@ -10,5 +10,9 @@
   --color-neutrals-700: #303e49;
   --color-success-500: #1e976c;
 
+  --text-lg: 1.125rem;
+
   --shadow-level-1: 0px 4px 8px 0px rgb(0 0 0 / 0.08);
+
+  --breakpoint-xl: 85rem;
 }

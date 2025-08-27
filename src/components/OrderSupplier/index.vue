@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // TYPES
-import type { OrderSupplierProps } from "./types";
+import type { Supplier as OrderSupplierProps } from "@/types/order";
 
 defineProps<OrderSupplierProps>();
 </script>
@@ -8,7 +8,7 @@ defineProps<OrderSupplierProps>();
 <template>
   <section>
     <div>
-      {{ supplier }}
+      {{ name }}
     </div>
   </section>
 </template>

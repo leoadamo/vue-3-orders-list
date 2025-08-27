@@ -1,4 +1,8 @@
 @layer utilities {
+  .base-container {
+    @apply mx-auto w-full max-w-[1312px] p-4 lg:p-6 xl:px-0;
+  }
+
   .shadow-level-1 {
     box-shadow: var(--shadow-level-1);
   }

@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
         resolvers: [IconsResolver({ prefix: false })],
       }),
       Icons({
-        defaultClass: "inline-block size-4 text-gray-500",
+        defaultClass: "inline-block size-4 text-current",
       }),
       Fonts({
         google: {

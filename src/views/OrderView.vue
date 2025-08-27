@@ -13,18 +13,20 @@ fetchOrder(1);
 </script>
 
 <template>
-  <div v-if="isLoading">
-    <p>Loading...</p>
-  </div>
+  <main class="base-container">
+    <div v-if="isLoading">
+      <p>Loading...</p>
+    </div>
 
-  <div v-else-if="error">
-    <p>Error: {{ error.message }}</p>
-    <p>Detail: {{ error.detail }}</p>
-  </div>
+    <div v-else-if="error">
+      <p>Error: {{ error.message }}</p>
+      <p>Detail: {{ error.detail }}</p>
+    </div>
 
-  <template v-else>
-    <order-header :header="order.header" />
-    <order-supplier :supplier="order.supplier" />
-    <order-addresses :addresses="order.addresses" />
-  </template>
+    <template v-else>
+      <order-header v-bind="order.header" />
+      <order-supplier v-bind="order.supplier" />
+      <order-addresses :addresses="order.addresses" />
+    </template>
+  </main>
 </template>

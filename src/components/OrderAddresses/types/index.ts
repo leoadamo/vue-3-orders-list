@@ -1,6 +1,6 @@
 // TYPES
 import type { Address } from "@/types/order";
 
-export type OrderAddressesProps = {
+export interface OrderAddressesProps {
   addresses: Address[];
-};
+}
