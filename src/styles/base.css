@@ -1,7 +1,7 @@
 @layer base {
   /* App wide styles */
   body {
-    @apply font-roboto text-neutrals-500 text-xs;
+    @apply font-roboto text-xs text-neutral-500;
   }
 
   /*

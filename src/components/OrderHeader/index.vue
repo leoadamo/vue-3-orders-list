@@ -29,14 +29,14 @@ const createdAt = computed(() => {
 
 <template>
   <header class="flex w-full gap-6">
-    <div class="bg-primary-500 text-neutrals-white w-[200px] rounded-tr-lg rounded-br-lg p-4">
+    <div class="bg-primary-500 text-neutral-white w-[200px] rounded-tr-lg rounded-br-lg p-4">
       <h2 class="text-lg">Pre-Order</h2>
       <h1 class="text-2xl font-bold">{{ number }}</h1>
       <p class="text-xs">#ME{{ serial }}</p>
     </div>
 
     <div class="flex flex-col gap-3">
-      <h3 class="text-neutrals-700 text-lg font-semibold">{{ buyer }}</h3>
+      <h3 class="text-lg font-semibold text-neutral-700">{{ buyer }}</h3>
 
       <div class="flex flex-col gap-1">
         <span>

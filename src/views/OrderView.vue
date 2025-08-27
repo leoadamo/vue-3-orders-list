@@ -13,7 +13,7 @@ fetchOrder(1);
 </script>
 
 <template>
-  <main class="base-container">
+  <div class="base-container">
     <div v-if="isLoading">
       <p>Loading...</p>
     </div>
@@ -23,10 +23,13 @@ fetchOrder(1);
       <p>Detail: {{ error.detail }}</p>
     </div>
 
-    <template v-else>
+    <main
+      v-else
+      class="flex flex-col gap-8"
+    >
       <order-header v-bind="order.header" />
       <order-supplier v-bind="order.supplier" />
       <order-addresses :addresses="order.addresses" />
-    </template>
-  </main>
+    </main>
+  </div>
 </template>

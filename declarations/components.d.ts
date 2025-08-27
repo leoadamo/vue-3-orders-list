@@ -8,6 +8,9 @@ export {};
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AppBadge: typeof import('./../src/components/AppBadge/index.vue')['default']
+    AppCard: typeof import('./../src/components/AppCard/index.vue')['default']
+    BaseCard: typeof import('../src/components/AppCard/index.vue')['default']
     IonCallOutline: typeof import('~icons/ion/call-outline')['default']
     IonContactOutline: typeof import('~icons/ion/contact-outline')['default']
     IonEmailOutline: typeof import('~icons/ion/email-outline')['default']
