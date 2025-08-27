@@ -1,0 +1,5 @@
+@layer utilities {
+  .shadow-level-1 {
+    box-shadow: var(--shadow-level-1);
+  }
+}

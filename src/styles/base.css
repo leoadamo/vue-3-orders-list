@@ -1,0 +1,14 @@
+@layer base {
+  /* App wide styles */
+  body {
+    @apply font-roboto;
+  }
+
+  /*
+    Overrides preflight base styles
+    in order to avoid vue-axe button svgs layout issues.
+  */
+  .va-btn > svg {
+    @apply inline;
+  }
+}
