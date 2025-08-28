@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
       Icons({
         customCollections: {
           "app-icons": FileSystemIconLoader("./src/assets/icons", (svg) =>
-            svg.replace(/^<svg /, '<svg class="inline-block text-current" '),
+            svg.replace(/^<svg /, '<svg class="shrink-0 inline-block text-current" '),
           ),
         },
       }),
