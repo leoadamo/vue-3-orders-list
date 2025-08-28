@@ -7,7 +7,7 @@ import { format, parseISO } from "date-fns";
  * @param {string} dateString The date string to format.
  * @returns {string} The formatted date string.
  */
-export function formatOrderDate(dateString: string): string {
+export function formatDate(dateString: string): string {
   try {
     const date = parseISO(dateString);
 

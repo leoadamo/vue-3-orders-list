@@ -2,7 +2,6 @@
 // COMPONENTS
 import OrderHeader from "@/components/OrderHeader/index.vue";
 import OrderSupplier from "@/components/OrderSupplier/index.vue";
-import OrderAddresses from "@/components/OrderAddresses/index.vue";
 
 // COMPOSABLES
 import { useOrder } from "@/composables/useOrder";
@@ -29,7 +28,6 @@ fetchOrder(1);
     >
       <order-header v-bind="order.header" />
       <order-supplier v-bind="order.supplier" />
-      <order-addresses :addresses="order.addresses" />
     </main>
   </div>
 </template>

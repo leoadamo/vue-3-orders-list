@@ -10,9 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppBadge: typeof import('./../src/components/AppBadge/index.vue')['default']
     AppCard: typeof import('./../src/components/AppCard/index.vue')['default']
-    IonCallOutline: typeof import('~icons/ion/call-outline')['default']
-    IonMailOutline: typeof import('~icons/ion/mail-outline')['default']
-    IonPersonOutline: typeof import('~icons/ion/person-outline')['default']
+    AppRow: typeof import('./../src/components/AppRow/index.vue')['default']
     OrderAddresses: typeof import('./../src/components/OrderAddresses/index.vue')['default']
     OrderHeader: typeof import('./../src/components/OrderHeader/index.vue')['default']
     OrderSupplier: typeof import('./../src/components/OrderSupplier/index.vue')['default']

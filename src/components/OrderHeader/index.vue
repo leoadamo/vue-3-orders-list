@@ -1,7 +1,13 @@
 <script setup lang="ts">
 // DEPENDENCIES
 import { computed } from "vue";
-import { formatOrderDate } from "@/utils/formatDate";
+import { omit } from "lodash-es";
+
+// COMPONENTS
+import AppContactRow from "@/components/AppRow/index.vue";
+
+// UTILS
+import { formatDate } from "@/utils/formatDate";
 
 // TYPES
 import type { Header as OrderHeaderProps } from "@/types/order";
@@ -23,7 +29,7 @@ const totalPrice = computed(() => {
  * @returns {string} The formatted creation date.
  */
 const createdAt = computed(() => {
-  return formatOrderDate(props.createdAt);
+  return formatDate(props.createdAt);
 });
 </script>
 
@@ -39,35 +45,20 @@ const createdAt = computed(() => {
       <h3 class="text-lg font-semibold text-neutral-700">{{ buyer }}</h3>
 
       <div class="flex flex-col gap-1">
-        <span>
-          <ion-person-outline />
-          {{ contact.name }}
-        </span>
+        <app-contact-row
+          type="raw"
+          icon="person"
+          :content="contact.name"
+        />
 
         <div class="flex items-center gap-4">
-          <a
-            :href="`mailto:${contact.email}`"
-            class="hover:text-primary-500 inline-flex items-center gap-1 transition-colors duration-200 hover:underline"
-          >
-            <ion-mail-outline />
-            {{ contact.email }}
-          </a>
-
-          <a
-            :href="`tel:${contact.phone}`"
-            class="hover:text-primary-500 inline-flex items-center gap-1 transition-colors duration-200 hover:underline"
-          >
-            <ion-call-outline />
-            {{ contact.phone }}
-          </a>
-
-          <a
-            :href="`tel:${contact.fax}`"
-            class="hover:text-primary-500 inline-flex items-center gap-1 transition-colors duration-200 hover:underline"
-          >
-            <ion-call-outline />
-            {{ contact.fax }}
-          </a>
+          <app-contact-row
+            v-for="(value, key) in omit(contact, 'name')"
+            :key="key"
+            :type="key"
+            :icon="key"
+            :content="value"
+          />
         </div>
       </div>
     </div>

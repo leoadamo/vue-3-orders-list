@@ -5,6 +5,8 @@ export interface Contact {
   fax: string;
 }
 
+export type ContactTypes = keyof Contact;
+
 export interface Header {
   number: number;
   serial: number;

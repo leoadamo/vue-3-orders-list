@@ -6,7 +6,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 import tailwindcss from "@tailwindcss/vite";
 import Components from "unplugin-vue-components/vite";
 import Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
+import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import Fonts from "unplugin-fonts/vite";
 
 // https://vite.dev/config/
@@ -18,10 +18,13 @@ export default defineConfig(({ mode }) => {
       vue(),
       Components({
         dts: "declarations/components.d.ts",
-        resolvers: [IconsResolver({ prefix: false })],
       }),
       Icons({
-        defaultClass: "inline-block size-4 text-current",
+        customCollections: {
+          "app-icons": FileSystemIconLoader("./src/assets/icons", (svg) =>
+            svg.replace(/^<svg /, '<svg class="inline-block text-current" '),
+          ),
+        },
       }),
       Fonts({
         google: {

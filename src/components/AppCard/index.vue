@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // DEPENDENCIES
-import { withDefaults, computed } from "vue";
+import { computed } from "vue";
 
 // COMPONENTS
 import AppBadge from "@/components/AppBadge/index.vue";
@@ -19,6 +19,17 @@ const props = withDefaults(defineProps<AppCardProps>(), {
  * @returns {boolean} True if badge prop is provided, false otherwise.
  */
 const showBadge = computed(() => Boolean(props.badge));
+
+/**
+ * Computed property to determine the classes for the grid layout.
+ *
+ * @returns {string} The classes for the grid layout.
+ */
+const classes = computed(() => {
+  return props.singleColumn
+    ? "grid w-full grid-cols-1 gap-1"
+    : "grid w-full grid-cols-1 gap-1 sm:grid-cols-2";
+});
 </script>
 
 <template>
@@ -38,7 +49,7 @@ const showBadge = computed(() => Boolean(props.badge));
       </h4>
     </div>
 
-    <div>
+    <div :class="classes">
       <slot />
     </div>
   </div>
