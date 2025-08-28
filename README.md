@@ -1,45 +1,100 @@
-# .
+# Vue 3 Orders List
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, fully typed Vue 3 application for managing and viewing orders.  
+This project demonstrates best practices in Vue 3, TypeScript, composables, and component-driven architecture.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Technologies Used
 
-## Type Support for `.vue` Imports in TS
+- **Vue 3** – Modern frontend framework, using the Composition API and `<script setup>` for concise, reactive components.
+- **TypeScript** – Provides strict typing and enhanced developer experience.
+- **Vite** – Lightning-fast development server and build tool.
+- **Vue Router** – Enables single-page application (SPA) navigation and routing.
+- **Tailwind CSS** – Utility-first CSS framework for rapid, responsive styling.
+- **Vitest** – Lightweight, fast unit testing framework for Vue components.
+- **Husky** – Git hooks manager for enforcing pre-commit rules.
+- **Commitizen** – Standardized commit message formatting.
+- **Commitlint** – Ensures commit messages follow conventional commit conventions.
+- **LintStaged** – Runs linters on staged Git files for cleaner commits.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## 📁 General App Structure
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+```
+src/
+├── assets/             # Static assets like images, fonts, and icons
+├── components/         # Reusable Vue components
+│   ├── AppRow/         # Row component for contacts or orders
+│   └── OrderHeader/    # Header component for order lists
+├── composables/        # Vue composables (custom hooks, e.g., useOrder, useContact)
+├── plugins/            # Vue or third-party plugin setup
+├── router/             # Vue Router configuration and routes
+├── styles/             # Global CSS/Tailwind styles
+├── types/              # TypeScript types and interfaces
+├── utils/              # Utility functions (date formatting, API helpers, etc.)
+├── views/              # Page-level components for different routes
+├── App.vue             # Root Vue component
+└── main.ts             # Application entry point
+```
 
-## Project Setup
+---
+
+## 🛠️ Installation & Local Development
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/your-username/vue-3-orders-list.git
+cd vue-3-orders-list
+```
+
+### 2. Install Dependencies
 
 ```sh
 npm install
+# or
+yarn install
 ```
 
-### Compile and Hot-Reload for Development
+### 3. Create a local .env file
+
+Copy the example environment file to create your local `.env`:
+
+```sh
+cp .env.example .env
+```
+
+### 4. Run the Development Server
 
 ```sh
 npm run dev
+# or
+yarn dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The app will be available at [http://localhost:5173](http://localhost:5173) (default Vite port).
+
+### 4. Run Unit Tests
 
 ```sh
-npm run build
+npm run test
+# or
+yarn test
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+---
 
-```sh
-npm run test:unit
-```
+## 📝 Notes
 
-### Lint with [ESLint](https://eslint.org/)
+- API endpoints are expected to be available at `/api/orders/:id`.
+- All types are strictly enforced for reliability and maintainability.
+- For custom icons, see the `src/assets/icons/` directory and update the icon mapping in config as needed.
 
-```sh
-npm run lint
-```
+---
